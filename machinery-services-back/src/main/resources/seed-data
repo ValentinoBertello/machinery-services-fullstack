@@ -1,0 +1,261 @@
+INSERT INTO users (email, password, enabled, role, created_at, updated_at)
+VALUES (
+    'prueba@gmail.com',
+    '$2a$10$Auk2BaWT/UwtqlwOHUMV1uB6EGnohp/0HOP145qwlQJwEwi62kfWy', -- 12345
+    TRUE,
+    'ADMIN',
+    NOW(),
+    NOW()
+);
+
+INSERT INTO customers (id, full_name, deleted_at, created_at, updated_at) VALUES
+(1,  'Monzoni Marco y Fabio',                NULL, NOW(), NOW()),
+(2,  'Coop Prod Unidos Porteña',             NULL, NOW(), NOW()),
+(3,  'Prochetto Carlos Alberto',             NULL, NOW(), NOW()),
+(4,  'Maggi Jorge Eduardo',                  NULL, NOW(), NOW()),
+(5,  'Borda Bossana Marco y Adrian',         NULL, NOW(), NOW()),
+(6,  'Gerbaudo Gustavo y Gabriel',           NULL, NOW(), NOW()),
+(7,  'Los Algarrobos Grandes SRL',           NULL, NOW(), NOW()),
+(8,  'Baldo Javier Jose',                    NULL, NOW(), NOW()),
+(9,  'Esta Agrop Don Adolfo Sa',             NULL, NOW(), NOW()),
+(10, 'Coop Lim Agrop Las dos Provinci',      NULL, NOW(), NOW()),
+(11, 'La Oculta SA',                         NULL, NOW(), NOW()),
+(12, 'Bruera Juan Carlos',                   NULL, NOW(), NOW()),
+(13, 'Baldo Rodolfo, Renzo y Nahuel',        NULL, NOW(), NOW()),
+(14, 'Daniel Hugo Rosso',                    NULL, NOW(), NOW()),
+(15, 'Viotto Joel y Jeremias',               NULL, NOW(), NOW()),
+(16, 'Stola Walter',                         NULL, NOW(), NOW()),
+(17, 'Consorcio Caminero Porteña',           NULL, NOW(), NOW()),
+(18, 'Servicios Don Atlio sa',               NULL, NOW(), NOW()),
+(19, 'La Tranquera S.a.',                    NULL, NOW(), NOW()),
+(20, 'Est. La Angelita SRL',                 NULL, NOW(), NOW()),
+(21, 'Argano Gustavo',                       NULL, NOW(), NOW()),
+(22, 'Lorenzetti Mr Sas',                    NULL, NOW(), NOW()),
+(23, 'Gasia Marcelo Carlos',                 NULL, NOW(), NOW()),
+(24, 'Getagro Sa',                           NULL, NOW(), NOW()),
+(25, 'Gallo Wilmar,F,G,A,',                  NULL, NOW(), NOW()),
+(26, 'Crovella Claudio',                     NULL, NOW(), NOW()),
+(27, 'Negro Ruben',                          NULL, NOW(), NOW()),
+(28, 'Giordanoengo Harley',                  NULL, NOW(), NOW()),
+(29, 'Alberione Fernando',                   NULL, NOW(), NOW()),
+(30, 'Blangetti Alfredo SA',                 NULL, NOW(), NOW()),
+(31, 'Millaa Agropuecuaria Sas',             NULL, NOW(), NOW()),
+(32, 'Los Bernardos sa',                     NULL, NOW(), NOW()),
+(33, 'Agroempresa Santa Rita SA',            NULL, NOW(), NOW()),
+(34, 'Rafael Santiago Chiabrando',           NULL, NOW(), NOW()),
+(35, 'Olocco Marcos',                        NULL, NOW(), NOW()),
+(36, 'Hoja1',                                NULL, NOW(), NOW()),
+(37, 'Suc Noseda',                           NULL, NOW(), NOW()),
+(38, 'Rosina Juan Santiago',                 NULL, NOW(), NOW()),
+(39, 'Tracanelli Antonio Alberto',           NULL, NOW(), NOW()),
+(40, 'Agroeste SRL',                         NULL, NOW(), NOW()),
+(41, 'Don Eduardo Sa,',                      NULL, NOW(), NOW()),
+(42, 'Suc de Marenco',                       NULL, NOW(), NOW()),
+(43, 'Madrugar SA',                          NULL, NOW(), NOW()),
+(44, 'Mottura Victor',                       NULL, NOW(), NOW()),
+(45, 'Perusia Daniel Victor',                NULL, NOW(), NOW()),
+(46, 'Boiero Stella Maris',                  NULL, NOW(), NOW()),
+(47, 'Boscarol Javier, Marisa y Diego',      NULL, NOW(), NOW()),
+(48, 'Daniele Mauro y Gallo Franco',         NULL, NOW(), NOW());
+
+-- Servicios de Monzoni id: 1
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-14 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, motor caja e hidraulico y diferencial. Cambio de aceite y filtros, revision sistema electrico.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-16 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-24 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo, control de perdidas hidraulicas y ajuste de luces de trabajo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-27 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-30 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Servicio completo, cambio de mangueras hidraulicas, reparacion de perdida de agua, control de frenos y revision sistema electrico.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-13 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-20 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico, cambio aceite reductores y diferencial, regulacion de frenos, revision sistema TDF.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-18 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces, ajuste de espejos y engrase general de la unidad.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-24 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-28 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores, revision de frenos.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-17 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-20 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delan izquierdo, cambio de corona y satelites, cambio de crucetas, cambio de retenes y rodamientos, cambio de eje, se cambio aceite reductores, cambio de bba de freno, reparacion de pistones de frenos.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-20 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, motor caja e hidraulico y diferencial. Revision sistema electrico de tractor', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-15 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico , cambio aceite reductores y diferencial, cambio barra DT y acoples de barra, regulacion de frenos, revision sistema TDF.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-27 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Desarmar y armar dif delantero, cambio palier izquierdo, cambio retenes y rodamientos de reductor izquierdo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-18 00:00:00-03:00', 'WORKSHOP', 'MF6712', 'Cambio de sensor de presion transmision, se reviso sistema electrico y re arreglo una ficha', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-18 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de manguera hidraulico.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-28 00:00:00-03:00', 'WORKSHOP', 'MICHIGAN 45', 'Servicio completo, motor caja e hidraulico, cambio caliper de frenos delanteros, extrancion y reparacion tanque aire de frenos.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-23 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-31 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Servicio completo de tractor, motor caja e hidraulico y diferencial. Sacar, reparar y colocar bba de agua, Control perdida pedales frenos, Arreglo puerta lateral.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-29 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-05 00:00:00-03:00', 'WORKSHOP', 'Liugong', 'Servicio completo, desarmar reductores para cambio de discos de frenos, colocacion cardan dif delantero, armado y purgado de frenos. Engrasar completo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-20 00:00:00-03:00', 'WORKSHOP', 'MF 6712R - 5616hs', 'Servicio completo, revision por perdidas hidraulicas, cambio tecla tdf, cambio de cilindro de puerta, compostura sistema de luces,', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-19 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision de todas las unidades, para control general.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-17 00:00:00-03:00', 'WORKSHOP', 'Liugong', 'Sacar cardan para cambiar rodamientos y retenes de puente cardan', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-12 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-17 00:00:00-03:00', 'WORKSHOP', 'MF6713 4907hs', 'Servicio completo, arreglo escalera acceso a cabina, cambiar tacos cabina traseros.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-25 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-28 00:00:00-03:00', 'FIELD', '6712R', 'Cambio de caja de filtro de aire, perdida aceite transmision', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-25 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-01 00:00:00-03:00', 'FIELD', 'Liugong', 'Cambiar luces de trabajo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-02 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-07 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite motor, hidraulico y reductores, cambio de filtros, revision de frenos y sistema electrico.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-23 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo, control de perdidas hidraulicas y ajuste de luces de trabajo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-18 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-21 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos y luces de trabajo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-09 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, control de perdidas hidraulicas, cambio de filtros y revision sistema electrico.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-18 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y ajuste de luces de trabajo.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-27 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-29 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Cambio de mangueras hidraulicas, revision de frenos y control de perdida de agua.', 1, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-11-01 00:00:00-03:00', NULL, 'WORKSHOP', 'VALTRA AR150', 'Desarmado y armado de diferencial delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 1, NULL, NOW(), NOW());
+
+-- Servicios de Coop Prod Unidos Porteña id: 2
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-10 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite y filtros, revision sistema electrico.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-18 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-26 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-28 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Cambio de mangueras hidraulicas, control de frenos y revision sistema electrico.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-06 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-12 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-15 00:00:00-03:00', 'FIELD', 'VALTRA AR150', 'Control de perdidas hidraulicas, engrase general y ajuste de luces de trabajo.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-23 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-25 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision de frenos, control de luces y engrase general de la unidad.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-16 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-19 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Desarmar y armar dif delantero, cambio de retenes y rodamientos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-10 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y control general.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-23 00:00:00-03:00', 'FIELD', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-07 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-09 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de sensor de presion transmision y revision sistema electrico.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-22 00:00:00-03:00', 'FIELD', 'MF6712R', 'Revision sistema TDF, control de luces y engrase general.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-14 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-03 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-05 00:00:00-03:00', 'FIELD', 'Liugong', 'Desarmar reductores para cambio de discos de frenos y purgado de frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-16 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces y engrase general.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-24 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-27 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Sacar, reparar y colocar bba de agua, control perdida pedales frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-03 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-05 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-08 00:00:00-03:00', 'FIELD', 'Liugong', 'Ajuste de luces de trabajo y revision general de la unidad.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-13 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo, arreglo escalera acceso a cabina y cambio tacos cabina traseros.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-17 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-21 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdidas hidraulicas, engrase completo y revision de frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-25 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-28 00:00:00-03:00', 'FIELD', 'MF 6714S', 'Servicio completo de tractor, cambio de filtros y revision sistema electrico.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-28 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-30 00:00:00-03:00', 'WORKSHOP', 'Liugong', 'Sacar cardan para cambiar rodamientos y retenes de puente cardan.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-02 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-04 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite motor, hidraulico y reductores.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-11 00:00:00-03:00', 'FIELD', 'MF6712R', 'Cambio de caja de filtro de aire y control de perdida aceite transmision.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-17 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-23 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-26 00:00:00-03:00', 'WORKSHOP', 'Liugong', 'Revision general de la unidad, engrase completo y ajuste de luces de trabajo.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-07 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-12 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision de luces de trabajo y control de perdidas hidraulicas.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-16 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-18 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado y armado de diferencial delantero, cambio de retenes y rodamientos.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-26 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-28 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 2, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-11-02 00:00:00-03:00', NULL, 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 2, NULL, NOW(), NOW());
+
+-- Servicios de Prochetto Carlos Alberto id: 3
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-07 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-09 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite y filtros, revision sistema electrico.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-20 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-23 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-08 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-18 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-20 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdida de agua, revision de frenos y engrase general.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-12 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-15 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-08 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y ajuste de luces de trabajo.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-22 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-25 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de sensor de presion transmision y revision sistema electrico.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-13 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Desarmar y armar dif delantero, cambio palier izquierdo, retenes y rodamientos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-25 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-28 00:00:00-03:00', 'FIELD', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-11 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de manguera hidraulico y control de perdidas.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-07 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-10 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-23 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores y revision de frenos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-03 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-05 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-07 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-09 00:00:00-03:00', 'FIELD', 'Liugong', 'Ajuste de luces de trabajo y revision general de la unidad.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-12 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-15 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo, arreglo escalera acceso a cabina y cambio tacos cabina traseros.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-21 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-26 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-28 00:00:00-03:00', 'FIELD', 'JD 6600', 'Engrase completo, control de perdidas hidraulicas y revision de luces.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-02 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-04 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite motor, hidraulico y reductores.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-12 00:00:00-03:00', 'FIELD', 'MF6712R', 'Cambio de caja de filtro de aire y control de perdida aceite transmision.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-16 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-18 00:00:00-03:00', 'WORKSHOP', 'Liugong', 'Sacar cardan para cambiar rodamientos y retenes de puente cardan.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-24 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-27 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-07 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-13 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-16 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces y engrase general.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-20 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-22 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado y armado de diferencial delantero, cambio de retenes y rodamientos.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-28 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-30 00:00:00-03:00', 'WORKSHOP', 'MF 6714S', 'Servicio completo, cambio de filtros y revision sistema electrico.', 3, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-11-05 00:00:00-03:00', NULL, 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 3, NULL, NOW(), NOW());
+
+-- Servicios de Maggi Jorge Eduardo - id: 4
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-10 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite y filtros, revision sistema electrico.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-24 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-07 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-22 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdida de agua, revision de frenos y engrase general.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-17 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-20 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-11 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y ajuste de luces de trabajo.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-09 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de sensor de presion transmision y revision sistema electrico.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-20 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-22 00:00:00-03:00', 'FIELD', 'MF6712R', 'Revision sistema TDF, control de luces y engrase general.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-12 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-11 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-06 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-13 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdidas hidraulicas, engrase completo y revision de frenos.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-18 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-21 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo, arreglo escalera acceso a cabina y cambio tacos cabina traseros.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-26 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-28 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores y revision de frenos.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-03 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-05 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite motor, hidraulico y reductores.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-13 00:00:00-03:00', 'FIELD', 'Liugong', 'Ajuste de luces de trabajo y revision general de la unidad.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-22 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-24 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-08 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-17 00:00:00-03:00', 'FIELD', 'MF6712R', 'Cambio de caja de filtro de aire y control de perdida aceite transmision.', 4, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-27 00:00:00-03:00', NULL, 'WORKSHOP', 'MF 6714S', 'Servicio completo, cambio de filtros y revision sistema electrico.', 4, NULL, NOW(), NOW());
+
+-- Servicios de Borda Bossana Marco y Adrian - id: 5
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-11 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite y filtros, revision sistema electrico.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-22 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-25 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-08 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-18 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-20 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdida de agua, revision de frenos y engrase general.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-13 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-07 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-09 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Cambio de sensor de presion transmision y revision sistema electrico.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-23 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-25 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y ajuste de luces de trabajo.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-12 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-15 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Desarmar y armar dif delantero, cambio palier izquierdo, retenes y rodamientos.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-06 00:00:00-03:00', 'FIELD', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-25 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-27 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-11 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces y engrase general.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-28 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-30 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores y revision de frenos.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-06 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-08 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-21 00:00:00-03:00', 'FIELD', 'Liugong', 'Ajuste de luces de trabajo y revision general de la unidad.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-03 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-06 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite motor, hidraulico y reductores.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-17 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-19 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdidas hidraulicas, engrase completo y revision de frenos.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-07 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-20 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-22 00:00:00-03:00', 'FIELD', 'MF6712R', 'Cambio de caja de filtro de aire y control de perdida aceite transmision.', 5, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-28 00:00:00-03:00', NULL, 'WORKSHOP', 'MF 6714S', 'Servicio completo, cambio de filtros y revision sistema electrico.', 5, NULL, NOW(), NOW());
+
+-- Servicios de Gerbaudo Gustavo y Gabriel - id: 6
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-16 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-01-27 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-30 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-12 00:00:00-03:00', 'WORKSHOP', 'JD 6600', 'Cambio de mangueras hidraulicas, control de frenos y revision sistema electrico.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-07 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision de frenos, control de luces y engrase general de la unidad.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-24 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-27 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-13 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-15 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y ajuste de luces de trabajo.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-10 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio de sensor de presion transmision y revision sistema electrico.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-02 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-05 00:00:00-03:00', 'FIELD', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-17 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo, arreglo escalera acceso a cabina y cambio tacos cabina traseros.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-05 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-07 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-20 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-22 00:00:00-03:00', 'FIELD', 'Liugong', 'Ajuste de luces de trabajo y revision general de la unidad.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-04 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-06 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Servicio completo, cambio de aceite motor e hidraulico, revision de frenos.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-24 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdidas hidraulicas, engrase completo y revision de frenos.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-08 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-10 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Cambio de retenes y rodamientos, cambio de aceite reductores y revision de frenos.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-21 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces y engrase general.', 6, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-29 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-31 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 6, NULL, NOW(), NOW());
+
+-- Servicios de Los Algarrobos Grandes SRL - id: 7
+INSERT INTO maintenances (
+    maintenance_date, invoice_date, place, model, description,
+    customer_id, deleted_at, created_at, updated_at
+) VALUES
+(TIMESTAMP WITH TIME ZONE '2026-01-19 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-01-21 00:00:00-03:00', 'WORKSHOP', 'MF6713', 'Servicio completo de tractor, cambio de aceite y filtros, revision sistema electrico.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-02-11 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-02-14 00:00:00-03:00', 'FIELD', 'Liugong', 'Revision general de la unidad, engrase completo y control de perdidas hidraulicas.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-03-09 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-03-11 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Cambio aceite motor, cambio aceite hidraulico y revision sistema TDF.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-04-16 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-04-18 00:00:00-03:00', 'FIELD', 'JD 6600', 'Control de perdida de agua, revision de frenos y engrase general.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-05-21 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-05-24 00:00:00-03:00', 'WORKSHOP', 'VALTRA AR150', 'Desarmado dife delantero, cambio de retenes y rodamientos, cambio de aceite reductores.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-06-18 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-06-20 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision de frenos, control de luces y engrase general de la unidad.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-07-13 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-07-15 00:00:00-03:00', 'WORKSHOP', 'New Holland T7', 'Cambio de filtros, revision de frenos y control de perdidas hidraulicas.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-10 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-12 00:00:00-03:00', 'FIELD', 'Liugong', 'Engrase completo, revision de perdidas hidraulicas y ajuste de luces de trabajo.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-08-27 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-08-29 00:00:00-03:00', 'WORKSHOP', 'MF6712R', 'Desarmar y armar dif delantero, cambio palier izquierdo, retenes y rodamientos.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-14 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-09-17 00:00:00-03:00', 'FIELD', 'JD 6600', 'Servicio completo, control de perdida de agua y revision de frenos.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-09-30 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-02 00:00:00-03:00', 'WORKSHOP', 'Case IH Puma 140', 'Cambio de aceite hidraulico, cambio de filtros y revision sistema electrico.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-15 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-17 00:00:00-03:00', 'FIELD', 'MF6713', 'Revision por perdidas hidraulicas, control de luces y engrase general.', 7, NULL, NOW(), NOW()),
+(TIMESTAMP WITH TIME ZONE '2026-10-26 00:00:00-03:00', TIMESTAMP WITH TIME ZONE '2026-10-28 00:00:00-03:00', 'WORKSHOP', 'MF 6714S', 'Servicio completo, cambio de filtros y revision sistema electrico.', 7, NULL, NOW(), NOW());
+
+-- resincronizar secuencias
+SELECT setval(pg_get_serial_sequence('customers', 'id'), COALESCE((SELECT MAX(id) FROM customers), 1));
+SELECT setval(pg_get_serial_sequence('maintenances', 'id'), COALESCE((SELECT MAX(id) FROM maintenances), 1));
+
+
+

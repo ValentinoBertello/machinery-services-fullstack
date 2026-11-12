@@ -1,0 +1,31 @@
+// Bootstrap personalizado: solo incluye los módulos usados por el proyecto.
+
+// ===== CONFIGURACIÓN =====
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// ===== ESTILOS BASE =====
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// ===== COMPONENTES =====
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/offcanvas";
+
+// ===== UTILIDADES =====
+// Incluye clases como d-flex, gap-3, mb-3 y fw-bold.
+@import "bootstrap/scss/utilities/api";

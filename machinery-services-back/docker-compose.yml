@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres_machinery
+    environment:
+      POSTGRES_DB: machinery_db
+      POSTGRES_USER: machinery_user
+      POSTGRES_PASSWORD: machinery_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

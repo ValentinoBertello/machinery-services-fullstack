@@ -1,0 +1,121 @@
+/* ===== HEADER ===== */
+
+.page-header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.maintenances-count {
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35em 0.7em;
+}
+
+.page-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.client-name {
+  font-weight: 700;
+  color: #172952;
+}
+
+/* ===== TABLE ===== */
+
+.maintenances-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.maintenances-table th,
+.maintenances-table td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.maintenances-table td {
+  line-height: 1.5;
+}
+
+.maintenances-table thead th {
+  background: #f3f4f6;
+  font-weight: 600;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.maintenances-table tbody tr:hover {
+  background: #e9eaeb;
+}
+
+.maintenances-table .pending {
+  color: #b9b5b1;
+  font-style: italic;
+}
+
+.maintenances-table .model {
+  font-weight: 600;
+}
+
+.maintenances-table .col-1 {
+  width: 10%;
+}
+
+.maintenances-table .col-7 {
+  width: 60%;
+}
+
+.maintenances-table .btn-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7f1ff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 9px;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.maintenances-table .btn-edit:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.place-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-left: 9px;
+}
+
+.field {
+  background-color: #e6f4ea;
+  color: #3b7a57;
+}
+
+.workshop {
+  background-color: #e8f0fe;
+  color: #4a6fa5;
+}
+
+.customer-accent-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-left: 3px solid #3b82f6;
+  padding: 0 0.3rem 0 0.6rem;
+  line-height: 1.2;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}

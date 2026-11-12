@@ -1,0 +1,38 @@
+/* ===== HEADER ===== */
+
+.customers-count {
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35em 0.7em;
+}
+
+/* ===== TABLE ===== */
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.customers-table th,
+.customers-table td {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.customers-table td {
+  line-height: 1.5;
+}
+
+.customers-table thead th {
+  background: #f3f4f6;
+  font-weight: 600;
+  border-bottom: 2px solid #d1d5db;
+}
+
+.customers-table tbody tr:hover {
+  background: #e9eaeb;
+}
