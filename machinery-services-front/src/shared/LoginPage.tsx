@@ -13,6 +13,9 @@ const schema = z.object({
     email: z.string().min(1, 'Email obligatorio'),
     password: z.string().min(1, 'Constraseña obligatoria'),
 })
+
+const isDemo = import.meta.env.VITE_DEMO_MODE === 'true';
+
 export default function LoginPage() {
     const { login } = useAuth();
     const navigate = useNavigate();
@@ -29,7 +32,16 @@ export default function LoginPage() {
 
     // React Hook Form
     const { register, handleSubmit, formState: { errors } } = useForm({
-        resolver: zodResolver(schema)
+        resolver: zodResolver(schema),
+        defaultValues: isDemo
+            ? {
+                email: 'demo@maquinaria.com',
+                password: 'demo123',
+            }
+            : {
+                email: '',
+                password: '',
+            },
     });
 
     // On Submit
@@ -77,7 +89,9 @@ export default function LoginPage() {
                         <button type="submit" className='btn btn-success' disabled={mutation.isPending}>
                             {mutation.isPending
                                 ? 'Logueando...'
-                                : 'Enviar'}
+                                : isDemo
+                                    ? 'Ingresar a la demo'
+                                    : 'Enviar'}
                         </button>
 
                     </form>
