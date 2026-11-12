@@ -1,6 +1,9 @@
 import type { Maintenance, NewMaintenance, UpdateMaintenance } from './types';
 import type { PageResponse } from '../../shared/types/pagination.types';
 import { request } from '@/shared/api/client';
+import * as demoApi from '@/demo/demoApi';
+
+const isDemo = import.meta.env.VITE_DEMO_MODE === 'true';
 
 export function getMaintenancesByCustomerAndDates(
     customerId: number,
@@ -10,6 +13,17 @@ export function getMaintenancesByCustomerAndDates(
     size: number,
     sortOrder = "desc"
 ): Promise<PageResponse<Maintenance>> {
+    if (isDemo) {
+        return demoApi.getMaintenancesByCustomerAndDates(
+            customerId,
+            since,
+            until,
+            page,
+            size,
+            sortOrder,
+        );
+    }
+
     const params = new URLSearchParams({
         customerId: String(customerId),
         since,
@@ -26,6 +40,10 @@ export function getMaintenancesByCustomerAndDates(
 }
 
 export function createMaintenance(newMaintenanceRecord: NewMaintenance): Promise<Maintenance> {
+    if (isDemo) {
+        return demoApi.createMaintenance(newMaintenanceRecord);
+    }
+
     return request<Maintenance>("/maintenances", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -34,6 +52,10 @@ export function createMaintenance(newMaintenanceRecord: NewMaintenance): Promise
 }
 
 export function updateMaintenance( id: number, updateMaintenance: UpdateMaintenance ): Promise<Maintenance> {
+    if (isDemo) {
+        return demoApi.updateMaintenance(id, updateMaintenance);
+    }
+
     return request<Maintenance>(`/maintenances/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -48,6 +70,16 @@ export function getMaintenanceByDates(
     size: number,
     sortOrder = "desc"
 ): Promise<PageResponse<Maintenance>> {
+    if (isDemo) {
+        return demoApi.getMaintenanceByDates(
+            since,
+            until,
+            page,
+            size,
+            sortOrder,
+        );
+    }
+
     const params = new URLSearchParams({
         since,
         until,
